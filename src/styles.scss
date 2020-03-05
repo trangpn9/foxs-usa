@@ -1,0 +1,170 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+.logo {
+    width: 10rem;
+    height: auto;
+}
+.text-color {
+    color: #0489c2 !important;
+}
+li.li-icon {
+    position: relative;
+    list-style: none;    
+}
+#footer {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-top: 30px;
+}
+#footer li.li-icon {
+    color: #6c6c6c;
+    font-weight: 600;
+    padding-bottom: 3px;
+}
+li.icon-address::before {
+    position: absolute;
+    left: -40px;
+    content: "";
+    background-image: url('./assets/images/icon-addressl.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1.8rem;    
+    width: 30px;
+    height: 100%;
+}
+li.icon-tel::before {
+    position: absolute;
+    left: -40px;
+    content: "";
+    background-image: url('./assets/images/icon-tel.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1.5rem;    
+    width: 30px;
+    height: 100%;
+}
+li.icon-email::before {
+    position: absolute;
+    left: -40px;
+    content: "";
+    background-image: url('./assets/images/icon-mail.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1.5rem;    
+    width: 30px;
+    height: 100%;
+}
+#footer h3.title-footer {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-size: 1.39rem;
+    position: relative;
+}
+#footer h3.title-footer::before {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 120%;
+    border-bottom: 2px solid;
+}
+
+#footer h4.title-info-contact {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+#info-footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#info-footer .col-md-4 li.nav-item img{
+    margin-right: 5px;
+    width: 30px;
+    height: auto;
+}
+#info-footer .col-md-8 li.nav-item a {
+    text-transform: uppercase;
+}
+#main-content {
+    min-height: 300px;
+    background-image: url('./assets/images/bg_main-content_1.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+    display: block;    
+}
+#main-menu #navbarTogglerMainMenu li.nav-item .nav-link.text-color {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#main-menu #navbarTogglerMainMenu li.nav-item .nav-link.text-color.active, 
+#main-menu #navbarTogglerMainMenu li.nav-item .nav-link.text-color:hover{
+    color: #ec1c24 !important;
+}
+#slide-customer {
+    position: relative;
+}
+.h2-title {
+    text-transform: uppercase;
+    margin-bottom: 20px;    
+    position: relative;
+    font-size: 1.6em;
+    margin-bottom: 35px;
+}
+.h2-title::after {
+    position: absolute;
+    content: "";
+    background-color: #0489c2;    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;;
+    width: 120px;
+    height: 5px;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -60px;
+}
+.h2-title img {
+    width: 25px;
+    height: auto;
+}
+#slide-customer .h2-title {
+    background-image: url('./assets/images/bg_h2_title.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 45px;
+    margin-bottom: 0;
+}
+#slide-customer .h2-title::after {
+    bottom: -5px;
+    margin-left: -58px;
+}
+#slide-customer .owl-carousel.owl-theme.owl-loaded.owl-responsive {
+    position: relative;
+    padding: 30px 0;
+}
+#slide-customer .owl-nav.ng-star-inserted {
+    margin-top: 0;
+}
+
+#slide-customer .owl-nav .owl-prev, 
+#slide-customer .owl-nav .owl-next {
+    position: absolute;
+    z-index: 100;
+    background-color: #090909;
+}
+#slide-customer .owl-nav .owl-prev:hover, 
+#slide-customer .owl-nav .owl-next:hover {
+    background-color: #2c2c2c;
+}
+#slide-customer .owl-nav .owl-prev {    
+    left: -40px;
+    top: 32%;    
+}
+
+#slide-customer .owl-nav .owl-next {    
+    right: -40px;
+    top: 32%;    
+}
