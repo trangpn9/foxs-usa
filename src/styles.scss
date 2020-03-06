@@ -186,8 +186,24 @@ li.icon-email::before {
     top: 32%;        
     line-height: unset;    
 }
+#slide-customer .owl-carousel .owl-item {
+    padding: 0 5px;    
+}
 #slide-customer .owl-carousel .owl-item img {
     margin: 0 auto !important;
+}
+h3.h3-title-teachnical {
+    position: absolute;
+    z-index: 200;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    text-align: center;
 }
 @media screen and (max-width: 600px) {
     #slide-customer .owl-nav .owl-prev {    
@@ -203,4 +219,9 @@ li.icon-email::before {
     #foxsUSA-services .owl-nav .owl-next {        
         right: 0px;
     }
+}
+.wrap-slide-technical.ng-star-inserted {
+    position: relative;
+    display: block;
+    margin: 0 5px;
 }
