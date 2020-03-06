@@ -30,7 +30,7 @@ export class SlideCustomerComponent implements OnInit {
         items: 5
       }
     },
-    nav: true
+    nav: true,
   }
 
   constructor() { }

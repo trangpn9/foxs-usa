@@ -1,11 +1,15 @@
 <div class="container" id="foxsUSA-services">
     <h2 class="h2-title col-12 d-flex align-items-center justify-content-center text-color"><img alt="icon-title" src="../../../assets/images/icon_pharmacy_blueX.png"/>Dây chuyền sản xuất</h2>
-    <div class="row">        
-        <div class="col-md-6 col-12 text-center">
-            <img alt="Dây chuyền sản xuất cốm bột" class="img-fluid" src="../../../assets/images/day_chuyen_com_bot.jpg"/>
-        </div>
-        <div class="col-md-6 col-12 text-center">
-            <img alt="Dây chuyền sản xuất viên nang" class="img-fluid" src="../../../assets/images/day_chuyen_vien_nen.jpg"/>
-        </div>        
-    </div>
+           
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+            <img alt="Dây chuyền sản xuất cốm bột" class="img-fluid" src="../../../assets/images/day_chuyen_com_bot.jpg" style="padding: 0 5px;"/>
+        </ng-template>
+        <ng-template carouselSlide>
+            <img alt="Dây chuyền sản xuất viên nang" class="img-fluid" src="../../../assets/images/day_chuyen_vien_nen.jpg" style="padding: 0 5px;"/>
+        </ng-template>
+        <ng-template carouselSlide>
+            <img src="../../../assets/images/day_chuyen_siro1.jpg" class="img-fluid" alt="Dây chuyền sản xuất siro" style="padding: 0 5px;" />
+        </ng-template>  
+    </owl-carousel-o>    
 </div>
