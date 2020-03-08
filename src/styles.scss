@@ -225,3 +225,33 @@ h3.h3-title-teachnical {
     display: block;
     margin: 0 5px;
 }
+#support-right {
+    position: fixed;
+    right: 10px;
+    top: 30%;
+    z-index: 1300;
+}
+#support-right {
+    list-style: none;
+}
+#support-right li {
+    text-align: center;
+    padding-bottom: 5px;
+}
+#support-right li .icon-lang {
+    width: 30px;
+    padding-right: 3px;
+}
+#support-right li .icon-support {
+    width: 60px;
+}
+#support-right li .icon-lang,
+#support-right li .icon-support {
+    transition: all .09s ease-in-out .09s;
+}
+#support-right li .icon-lang:hover {
+    width: 35px;
+}
+#support-right li .icon-support:hover {
+    width: 65px;
+}
