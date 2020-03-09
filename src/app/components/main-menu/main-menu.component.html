@@ -1,6 +1,6 @@
 <div class="container-fluid bg-light sticky-top" id="main-menu">
     <nav class="navbar navbar-expand-lg navbar-light row">
-        <a class="navbar-brand d-block d-md-none" href="#">
+        <a class="navbar-brand d-block d-md-none" routerLink="/">
             <img alt="Logo Foxs-USA" src="../../../assets/images/logo_Foxs-USA.png" style="width: 80px;" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerMainMenu"
@@ -11,22 +11,22 @@
         <div class="collapse navbar-collapse" id="navbarTogglerMainMenu">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-color active" href="#">Trang chủ</a>
+                    <a class="nav-link text-color" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">Trang chủ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-color" href="#">Giới thiệu</a>
+                    <a class="nav-link text-color" routerLinkActive="active" routerLink="/about-us">Giới thiệu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-color" href="#">Dịch vụ</a>
+                    <a class="nav-link text-color" routerLinkActive="active" routerLink="/services">Dịch vụ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-color" href="#">Tin tức</a>
+                    <a class="nav-link text-color" routerLinkActive="active" routerLink="/news">Tin tức</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-color" href="#">Tuyển dụng</a>
+                    <a class="nav-link text-color" routerLinkActive="active" routerLink="/recruitment">Tuyển dụng</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-color" href="#">Liên hệ</a>
+                    <a class="nav-link text-color" routerLinkActive="active" routerLink="/contact">Liên hệ</a>
                 </li>
                 <li class="nav-item">
                     <button class="btn my-2 my-sm-0" type="button">
