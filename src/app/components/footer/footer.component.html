@@ -1,10 +1,8 @@
 <div class="container-fluid" id="footer">
     <div class="row">
         <div class="col-md-3 text-md-left text-center">
-            <img alt="Logo Foxs-USA" src="../../../assets/images/logo_Foxs-USA.png" class="logo"/>
-            <p class="text-justify">                
-                Tự hòa là một trong những công ty dược phẩm hàng đầu Việt Nam. Luôn đi đầu trong lĩnh vực nghiên cứu và sản xuất dòng sẩn phẩm chức năng chất lượng cao.
-            </p>
+            <img alt="Logo Foxs-USA" src="../../../assets/images/logo_Foxs-USA.png" class="logo"/>            
+            <div class="text-justify" [innerHTML]="content_short"></div>
         </div>
         <div class="col-md-3">
             <h3 class="title-footer text-color">Thông tin liên hệ</h3>
@@ -12,18 +10,22 @@
                 CÔNG TY CỔ PHẦN DƯỢC PHẨM LIÊN DOANH FOXS-USA
             </h4>
             <ul>
-                <li class="li-icon icon-address">Cụm công nghiệp Hà Bình Phương, Văn Bình, Thường Tín, Hà Nội </li>
+                <li class="li-icon icon-address">Cụm công nghiệp Hà Bình Phương, Văn Bình, Thường Tín, Hà Nội</li>
                 <li class="li-icon icon-tel">0243.200.8021 - 0243.200.8023</li>
                 <li class="li-icon icon-email">foxsusapharma@gmail.com</li>
             </ul>
         </div>
         <div class="col-md-3 d-sm-block d-none">
             <h3 class="title-footer text-color">Bản đồ</h3>
-            <img alt="Ban do dia chi Foxs-USA" src="../../../assets/images/bando.PNG" class="map-footer"/>
+            <a routerLink="/contact">
+                <img alt="Ban do dia chi Foxs-USA" src="../../../assets/images/bando.PNG" class="map-footer"/>
+            </a>            
         </div>
         <div class="col-md-3 d-sm-block d-none">
             <h3 class="title-footer text-color">Fanpage</h3>
-            <img alt="Ban do dia chi Foxs-USA" src="../../../assets/images/img_footer_01.png" style="width: 98%;"/>
+            <div class="wrapFanpage">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FnhamaysanxuatthucphambvskFOXSUSA&tabs&width=340&height=197&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="197" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
         </div>
     </div>
 </div>

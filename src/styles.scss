@@ -105,12 +105,20 @@ li.icon-email::before {
 #slide-customer {
     position: relative;
 }
-.h2-title {
+.h3-title, .h2-title {
     text-transform: uppercase;
     margin-bottom: 20px;    
     position: relative;
     font-size: 1.6em;
+}
+.h2-title {
     margin-bottom: 35px;
+}
+.h3-title {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #0489c2;
+    margin-bottom: 20px;
 }
 .h2-title::after {
     position: absolute;
@@ -125,7 +133,7 @@ li.icon-email::before {
     bottom: -10px;
     margin-left: -60px;
 }
-.h2-title img {
+.h2-title img, .h3-title img {
     width: 25px;
     height: auto;
 }
