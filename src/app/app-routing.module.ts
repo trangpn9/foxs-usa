@@ -45,7 +45,7 @@ const appRouters: Routes = [
     CommonModule,
     RouterModule.forRoot(
       appRouters,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: false } // <-- debugging purposes only
     ),
     CarouselModule,
     BrowserAnimationsModule,

@@ -238,19 +238,28 @@ h3.h3-title-teachnical {
     padding-bottom: 5px;
 }
 #support-right li .icon-lang {
-    width: 30px;
+    width: 20px;
     padding-right: 3px;
 }
 #support-right li .icon-support {
-    width: 60px;
+    width: 40px;
 }
 #support-right li .icon-lang,
 #support-right li .icon-support {
-    transition: all .09s ease-in-out .09s;
+    transition: all .1s ease-in-out .1s;
 }
 #support-right li .icon-lang:hover {
     width: 35px;
 }
 #support-right li .icon-support:hover {
-    width: 65px;
+    width: 60px;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto 28px;
+}
+.alignleft {
+    float: left;
+    margin: 6px 0 28px 0;
 }
