@@ -1,3 +1,19 @@
-#foxsUSA-services {
+#foxsUSA-services, #suMenh {
     margin: 30px auto; 
+}
+#suMenh ol {
+    list-style: none; 
+    counter-reset: li-counter;    
+}
+#suMenh li::before {
+    counter-increment: li-counter;
+    content: counter(li-counter)'.';
+    color: #0489c2 !important;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    font-weight: bold;
+}
+#suMenh .h2-title::after {
+    left: 50.5% !important;
 }
