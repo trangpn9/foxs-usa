@@ -15,6 +15,7 @@ import { NewsComponent } from './pages/news/news.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { RecruitmentComponent } from './pages/recruitment/recruitment.component';
 import { ServicesUsComponent } from './pages/services-us/services-us.component';
+import { NewsHomeComponent } from './components/news-home/news-home.component';
 
 const appRouters: Routes = [
   { path: '', component: HomePageComponent },
@@ -40,6 +41,7 @@ const appRouters: Routes = [
     NewsComponent,
     ContactComponent,
     RecruitmentComponent,
+    NewsHomeComponent,
   ],
   imports: [
     CommonModule,
