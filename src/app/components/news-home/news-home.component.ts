@@ -24,10 +24,10 @@ export class NewsHomeComponent implements OnInit {
         items: 1
       },
       740: {
-        items: 4
+        items: 2
       },
       940: {
-        items: 4
+        items: 2
       }
     },
     nav: true
