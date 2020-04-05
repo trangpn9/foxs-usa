@@ -5,11 +5,11 @@ import { AppSetting } from '../constants/init-api';
 @Injectable({
   providedIn: 'root'
 })
-export class GetDataAboutUsService {
+export class GetDataPageServiceService {
 
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.http.get(`${AppSetting.API_SERVICE}wp/v2/pages/11`);
+    return this.http.get(`${AppSetting.API_SERVICE}wp/v2/dich_vu?_embed`);
   }
 }

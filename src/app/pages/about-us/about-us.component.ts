@@ -14,7 +14,7 @@ export class AboutUsComponent implements OnInit {
   constructor(private _getData: GetDataAboutUsService) { }
 
   ngOnInit() {
-    this._getData.getData().subscribe((data: any) => {
+    this._getData.getData().subscribe((data:any) => {
       this.data = {...data};
       this.content = this.data.content.rendered;
     }, (err) => {

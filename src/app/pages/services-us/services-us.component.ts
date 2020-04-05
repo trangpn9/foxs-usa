@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetDataPageServiceService } from '../../services/get-data-page-service.service';
 
 @Component({
   selector: 'app-services-us',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesUsComponent implements OnInit {
 
-  constructor() { }
+  data:any = '';
 
-  ngOnInit() {
+  constructor(private _getData: GetDataPageServiceService) { }
+
+  ngOnInit() {    
+    this._getData.getData().subscribe((data:any) => {
+      this.data = [...data];
+      console.log('Data: ', this.data);
+    }, (err) => {
+      console.log('ERRORS: ', err);
+    });
   }
 
 }
