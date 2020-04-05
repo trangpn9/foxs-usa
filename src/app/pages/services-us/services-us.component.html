@@ -5,13 +5,15 @@
     <div class="row">
         <div class="col-md-6 col-12 mb-4" *ngFor="let itemService of data">
             <div class="card">
-                <img class="card-img-top" [src]="itemService['_embedded']['wp:featuredmedia'][0]['source_url']" alt="Card image cap">
+                <a [routerLink]="['/services', itemService.id]">
+                    <img class="card-img-top" [src]="itemService['_embedded']['wp:featuredmedia'][0]['source_url']" alt="Card image cap">
+                </a>
                 <div class="card-body">
-                    <h5 class="card-title"><a href="#">{{itemService.title.rendered}}</a></h5>
+                    <h5 class="card-title"><a [routerLink]="['/services', itemService.id]">{{itemService.title.rendered}}</a></h5>
                     <p class="card-text text-justify">{{itemService.acf['mieu_ta_ngan']}}</p>                
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted"><a href="#">Chi tiết >></a></small>
+                    <small class="text-muted"><a [routerLink]="['/services', itemService.id]">Chi tiết >></a></small>
                     <small class="text-muted float-right">FoxsUSA</small>
                 </div>
             </div>

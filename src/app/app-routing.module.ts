@@ -16,12 +16,25 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { RecruitmentComponent } from './pages/recruitment/recruitment.component';
 import { ServicesUsComponent } from './pages/services-us/services-us.component';
 import { NewsHomeComponent } from './components/news-home/news-home.component';
+import { ServiceDetailComponent } from './pages/services-us/service-detail/service-detail.component';
+import { RenderHtmlPipe } from './pipes/render-html.pipe';
 
 const appRouters: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'hone', redirectTo: '/', pathMatch: 'full' },
   { path: 'about-us', component: AboutUsComponent },
-  { path: 'services', component: ServicesUsComponent},
+  { path: 'services', 
+    children: [
+      {
+        path: '',
+        component: ServicesUsComponent
+      },
+      {
+        path: ':id',
+        component: ServiceDetailComponent,      
+      }
+    ]
+  },
   { path: 'news', component: NewsComponent},
   { path: 'recruitment', component: RecruitmentComponent},
   { path: 'contact', component: ContactComponent},
@@ -30,6 +43,7 @@ const appRouters: Routes = [
 
 @NgModule({
   declarations: [
+    RenderHtmlPipe,
     PageNotFoundComponent,
     HomePageComponent,
     SlideComponent,
@@ -42,6 +56,7 @@ const appRouters: Routes = [
     ContactComponent,
     RecruitmentComponent,
     NewsHomeComponent,
+    ServiceDetailComponent
   ],
   imports: [
     CommonModule,

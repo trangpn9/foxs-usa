@@ -5,15 +5,11 @@ import { AppSetting } from '../constants/init-api';
 @Injectable({
   providedIn: 'root'
 })
-export class GetDataPageServiceService {
+export class GetSlideService {
 
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.http.get(`${AppSetting.API_SERVICE}wp/v2/dich_vu?_embed`);
-  }
-
-  getDetailServiceById(id:any) {
-    return this.http.get(`${AppSetting.API_SERVICE}wp/v2/dich_vu/${id}`);
+    return this.http.get(`${AppSetting.API_SERVICE}wp/v2/slide?_embed`);
   }
 }

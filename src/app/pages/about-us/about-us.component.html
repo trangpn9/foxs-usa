@@ -1,4 +1,8 @@
-<div class="container">
+<div class="container" *ngIf="content else loading">
     <h3 class="h3-title d-flex text-color"><img alt="icon-title" src="../../../assets/images/icon_pharmacy_blueX.png"/>Giới thiệu</h3>
-    <div [innerHTML]="content"></div>
+    <div [innerHTML]="content | renderHtml"></div>
 </div>
+
+<ng-template #loading>
+    <div class="container">Loading...</div>
+</ng-template>

@@ -14,8 +14,7 @@ export class ServicesUsComponent implements OnInit {
 
   ngOnInit() {    
     this._getData.getData().subscribe((data:any) => {
-      this.data = [...data];
-      console.log('Data: ', this.data);
+      this.data = [...data];      
     }, (err) => {
       console.log('ERRORS: ', err);
     });

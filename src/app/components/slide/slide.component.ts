@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetSlideService } from './../../services/get-slide.service';
 
 @Component({
   selector: 'app-slide',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlideComponent implements OnInit {
 
-  constructor() { }
+  data:any = '';
+
+  constructor(private _getData: GetSlideService) { }
 
   ngOnInit() {
+    this._getData.getData().subscribe((data:any) => {
+      this.data = [...data];
+      console.log('data: ', this.data);
+    }, (err) => {
+      console.log('ERRORS: ', err);
+    });
   }
 
 }

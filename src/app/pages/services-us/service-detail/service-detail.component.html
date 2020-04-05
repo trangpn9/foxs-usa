@@ -1,0 +1,13 @@
+<div class="container" *ngIf="title else loading">
+    <h3 class="h3-title d-flex text-color"><img alt="icon-title"
+            src="../../../assets/images/icon_pharmacy_blueX.png" />&nbsp;{{title.rendered}}</h3>    
+    
+    <div class="row">        
+        <div class="col-12" [innerHTML]="content.rendered | renderHtml"></div>        
+    </div>                
+    <br/>    
+</div>
+   
+<ng-template #loading>
+    <div class="container">Loading...</div>
+</ng-template>
