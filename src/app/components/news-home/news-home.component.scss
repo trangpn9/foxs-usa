@@ -7,17 +7,9 @@
 #slide-news-home a:hover{
     text-decoration: none !important;    
 }
-span.h4-title-new {
-    background-color: rgba(0,0,0,0.6);    
-    min-height: 75px;
-    width: 100%;
-    text-align: center;
+#slide-news-home .card {
+    margin: 0 15px;
 }
-span.h4-title-new h4 {
-    margin-bottom: 0;
-    color: #fff;            
-    font-size: 18px;        
-}
-span.h4-title-new:hover h4, .wrap-slide-technical:hover h4 {
-    text-decoration: underline !important;    
+#slide-news-home .card .card-body .card-title {
+    min-height: 50px;
 }

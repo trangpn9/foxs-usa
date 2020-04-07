@@ -2,13 +2,20 @@
     <h2 class="h2-title d-flex align-items-center justify-content-center text-color"><img alt="icon-alt" src="../../../assets/images/icon_pharmacy_blueX.png"/>Tin tức</h2>    
     <div class="container">
         <owl-carousel-o [options]="customOptions">
-            <ng-template carouselSlide *ngFor="let itemNews of data">
-                <a [routerLink]="['/news', itemNews.id]" class="wrap-slide-technical">
-                    <img [alt]="itemNews['title']['rendered']" class="img-fluid" [src]="itemNews['_embedded']['wp:featuredmedia'][0]['source_url']"/>
-                    <span class="h4-title-new d-flex align-items-center justify-content-center">
-                        <h4>{{itemNews['title']['rendered']}}</h4>
-                    </span>
-                </a>
+            <ng-template carouselSlide *ngFor="let itemNews of data">                
+                <div class="card">
+                    <a [routerLink]="['/news', itemNews.id]">
+                        <img class="card-img-top" [src]="itemNews['_embedded']['wp:featuredmedia'][0]['source_url']" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title"><a [routerLink]="['/news', itemNews.id]">{{itemNews.title.rendered}}</a></h5>
+                        <p class="card-text text-justify">{{itemNews.acf['mieu_ta_ngan']}}</p>                
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted"><a [routerLink]="['/news', itemNews.id]">Chi tiết >></a></small>
+                        <small class="text-muted float-right">FoxsUSA</small>
+                    </div>
+                </div>
             </ng-template>            
         </owl-carousel-o> 
     </div>    
