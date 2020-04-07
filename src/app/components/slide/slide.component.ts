@@ -14,8 +14,7 @@ export class SlideComponent implements OnInit {
 
   ngOnInit() {
     this._getData.getData().subscribe((data:any) => {
-      this.data = [...data];
-      console.log('data: ', this.data);
+      this.data = [...data];      
     }, (err) => {
       console.log('ERRORS: ', err);
     });

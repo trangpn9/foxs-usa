@@ -1,4 +1,32 @@
-<div class="container">
-    <h3 class="h3-title d-flex text-color"><img alt="icon-title" src="../../../assets/images/icon_pharmacy_blueX.png"/>Tuyển dụng</h3>
-    <p>Dữ liệu đang cập nhật...!</p>
+<div class="container" *ngIf="data else loading">
+    <h3 class="h3-title d-flex text-color"><img alt="icon-title" src="../../../assets/images/icon_pharmacy_blueX.png"/>&nbsp;Tuyển dụng</h3>
+    <div class="row">
+        <ng-container *ngIf="data.length !== 0 else empty">
+            <div class="col-md-6 col-12 mb-4" *ngFor="let itemRecruitment of data">
+                <div class="card">
+                    <a [routerLink]="['/recruitment', itemRecruitment.id]">
+                        <img class="card-img-top" [src]="itemRecruitment['_embedded']['wp:featuredmedia'][0]['source_url']" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title"><a [routerLink]="['/recruitment', itemRecruitment.id]">{{itemRecruitment.title.rendered}}</a></h5>
+                        <p class="card-text text-justify">{{itemRecruitment.acf['mieu_ta_ngan']}}</p>                
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted"><a [routerLink]="['/recruitment', itemRecruitment.id]">Chi tiết >></a></small>
+                        <small class="text-muted float-right">FoxsUSA</small>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <ng-template #empty>
+            <div class="col-12">
+                <p>Dự liệu đang cập nhật...!</p>
+            </div>
+        </ng-template>
+    </div>                
+    <br/>
 </div>
+
+<ng-template #loading>
+    <div class="container">Loading...</div>
+</ng-template>

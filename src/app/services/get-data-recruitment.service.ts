@@ -5,19 +5,15 @@ import { AppSetting } from '../constants/init-api';
 @Injectable({
   providedIn: 'root'
 })
-export class GetDataNewsHomeService {
+export class GetDataRecruitmentService {
 
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.http.get(`${AppSetting.API_SERVICE}wp/v2/posts?categories=1&per_page=4&_embed`);
+    return this.http.get(`${AppSetting.API_SERVICE}wp/v2/posts?categories=2&_embed`);
   }
 
-  getFullData() {
-    return this.http.get(`${AppSetting.API_SERVICE}wp/v2/posts?categories=1&_embed`);
-  }
-
-  getDetailNewsById(id:any) {
+  getDetailRecruitmentById(id:any) {
     return this.http.get(`${AppSetting.API_SERVICE}wp/v2/posts/${id}`);
   }
 }

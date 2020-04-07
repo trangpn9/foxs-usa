@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { GetDataTechnicalService } from './../../services/get-data-technical.service';
 
 @Component({
   selector: 'app-technical',
@@ -7,6 +8,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./technical.component.css']
 })
 export class TechnicalComponent implements OnInit {
+
+  data:any = '';
 
   customOptions: OwlOptions = {
     loop: true,    
@@ -33,9 +36,14 @@ export class TechnicalComponent implements OnInit {
     nav: true
   }
 
-  constructor() { }
+  constructor(private _getData: GetDataTechnicalService) { }
 
   ngOnInit() {
+    this._getData.getData().subscribe((data:any) => {
+      this.data = [...data];      
+    }, (err) => {
+      console.log('ERRORS: ', err);
+    });
   }
 
 }

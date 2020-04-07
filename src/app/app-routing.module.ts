@@ -18,6 +18,9 @@ import { ServicesUsComponent } from './pages/services-us/services-us.component';
 import { NewsHomeComponent } from './components/news-home/news-home.component';
 import { ServiceDetailComponent } from './pages/services-us/service-detail/service-detail.component';
 import { RenderHtmlPipe } from './pipes/render-html.pipe';
+import { NewDetailComponent } from './components/news-home/new-detail/new-detail.component';
+import { TechnicalDetailComponent } from './components/technical/technical-detail/technical-detail.component';
+import { RecruitmentDetailComponent } from './pages/recruitment/recruitment-detail/recruitment-detail.component';
 
 const appRouters: Routes = [
   { path: '', component: HomePageComponent },
@@ -35,8 +38,19 @@ const appRouters: Routes = [
       }
     ]
   },
-  { path: 'news', component: NewsComponent},
-  { path: 'recruitment', component: RecruitmentComponent},
+  { path: 'news', 
+    children: [
+      { path: '', component: NewsComponent },
+      { path: ':id', component: NewDetailComponent },
+    ]
+  },
+  { path:'technical/:id' , component: TechnicalDetailComponent },
+  { path: 'recruitment', 
+    children: [
+      { path: '', component: RecruitmentComponent },
+      { path: ':id', component: RecruitmentDetailComponent }
+    ]
+  },
   { path: 'contact', component: ContactComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -56,7 +70,10 @@ const appRouters: Routes = [
     ContactComponent,
     RecruitmentComponent,
     NewsHomeComponent,
-    ServiceDetailComponent
+    ServiceDetailComponent,
+    NewDetailComponent,
+    TechnicalDetailComponent,
+    RecruitmentDetailComponent,
   ],
   imports: [
     CommonModule,

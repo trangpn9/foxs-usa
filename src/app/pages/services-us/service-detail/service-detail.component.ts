@@ -13,7 +13,7 @@ export class ServiceDetailComponent implements OnInit {
   content:any = '';
 
   constructor(
-    private _getDataDetail:GetDataPageServiceService,
+    private _getDataDetail: GetDataPageServiceService,
     private activatedRoute: ActivatedRoute
   ) {}
 
@@ -27,7 +27,7 @@ export class ServiceDetailComponent implements OnInit {
       this.title = title;
       this.content = content;
     }, (err) => {
-      console.log('ERRORS: ', err)
+      console.log('ERRORS: ', err);
     });
   }
 
