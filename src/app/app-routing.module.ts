@@ -21,6 +21,7 @@ import { RenderHtmlPipe } from './pipes/render-html.pipe';
 import { NewDetailComponent } from './components/news-home/new-detail/new-detail.component';
 import { TechnicalDetailComponent } from './components/technical/technical-detail/technical-detail.component';
 import { RecruitmentDetailComponent } from './pages/recruitment/recruitment-detail/recruitment-detail.component';
+import { SpecialProductsComponent } from './components/special-products/special-products.component';
 
 const appRouters: Routes = [
   { path: '', component: HomePageComponent },
@@ -74,6 +75,7 @@ const appRouters: Routes = [
     NewDetailComponent,
     TechnicalDetailComponent,
     RecruitmentDetailComponent,
+    SpecialProductsComponent,
   ],
   imports: [
     CommonModule,

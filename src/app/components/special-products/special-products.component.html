@@ -1,0 +1,27 @@
+<div id="special-product" *ngIf="data else loading">    
+    <h2 class="h2-title d-flex align-items-center justify-content-center text-color"><img alt="icon-alt" src="../../../assets/images/icon_pharmacy_blueX.png"/>Sản phẩm tiêu biểu</h2>    
+    <div class="container">        
+        <a id="btnPre" class="btn btn-dark" (click)="owlCar.prev()"><img src="../../../assets/images/icon-pre.png" alt="icon previous" /></a>
+        <a id="btnNext" class="btn btn-dark" (click)="owlCar.next()"><img src="../../../assets/images/icon-next.png" alt="icon next" /></a>
+        <owl-carousel-o [options]="customOptions" #owlCar>
+            <ng-template carouselSlide *ngFor="let itemNews of data">                
+                <div class="card">
+                    <a [routerLink]="['/news', itemNews.id]">
+                        <img class="card-img-top" [src]="itemNews['_embedded']['wp:featuredmedia'][0]['source_url']" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title"><a [routerLink]="['/news', itemNews.id]">{{itemNews.title.rendered}}</a></h5>                                       
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted"><a [routerLink]="['/news', itemNews.id]">Chi tiết >></a></small>
+                        <small class="text-muted float-right">FoxsUSA</small>
+                    </div>
+                </div>
+            </ng-template>            
+        </owl-carousel-o> 
+    </div>    
+</div>
+
+<ng-template #loading>
+    <div class="container">Loading...</div>
+</ng-template>
