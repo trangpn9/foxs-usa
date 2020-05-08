@@ -22,6 +22,7 @@ import { NewDetailComponent } from './components/news-home/new-detail/new-detail
 import { TechnicalDetailComponent } from './components/technical/technical-detail/technical-detail.component';
 import { RecruitmentDetailComponent } from './pages/recruitment/recruitment-detail/recruitment-detail.component';
 import { SpecialProductsComponent } from './components/special-products/special-products.component';
+import { ProductsComponent } from './pages/products/products.component';
 
 const appRouters: Routes = [
   { path: '', component: HomePageComponent },
@@ -34,14 +35,19 @@ const appRouters: Routes = [
         component: ServicesUsComponent
       },
       {
-        path: ':id',
-        component: ServiceDetailComponent,      
+        path: ':id', component: ServiceDetailComponent,      
       }
     ]
   },
   { path: 'news', 
     children: [
       { path: '', component: NewsComponent },
+      { path: ':id', component: NewDetailComponent },
+    ]
+  },
+  { path: 'products', 
+    children: [
+      { path: '', component: ProductsComponent },
       { path: ':id', component: NewDetailComponent },
     ]
   },
@@ -76,6 +82,7 @@ const appRouters: Routes = [
     TechnicalDetailComponent,
     RecruitmentDetailComponent,
     SpecialProductsComponent,
+    ProductsComponent,
   ],
   imports: [
     CommonModule,

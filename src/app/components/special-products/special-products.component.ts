@@ -18,6 +18,7 @@ export class SpecialProductsComponent implements OnInit {
     pullDrag: false,
     dots: false,
     navSpeed: 700,
+    autoplaySpeed: 300,    
     navText: ['<img src="../../../assets/images/icon-pre.png" alt="icon previous" />', '<img src="../../../assets/images/icon-next.png" alt="icon next" />'],
     responsive: {
       0: {
@@ -33,6 +34,7 @@ export class SpecialProductsComponent implements OnInit {
         items: 3
       }
     },
+    autoplay: true,
     nav: false
   }
 

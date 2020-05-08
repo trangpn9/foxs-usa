@@ -21,6 +21,10 @@ export class GetDataNewsHomeService {
     return this.http.get(`${AppSetting.API_SERVICE}wp/v2/posts?categories=4&per_page=8&_embed`);
   }
 
+  getDataProductsAll() {
+    return this.http.get(`${AppSetting.API_SERVICE}wp/v2/posts?categories=4&posts_per_page=-1&_embed`);
+  }
+
   getDetailNewsById(id:any) {
     return this.http.get(`${AppSetting.API_SERVICE}wp/v2/posts/${id}`);
   }
